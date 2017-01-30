@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/header_imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:background="#fff"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/informations_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_imageview"
+        android:layout_marginBottom="-10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/dialog_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ye Pyae Sone Tun"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_team_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:gravity="center"
+            android:text="Android Developer"
+            android:textColor="#FFF" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/informations_container"
+        android:background="@color/colorPrimary"
+        android:padding="-20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/button_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_phone_call"
+                    android:text="CALL" />
+
+                <TextView
+                    android:id="@+id/dialog_mobile_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/button_phone"
+                    android:layout_alignBottom="@+id/button_phone"
+                    android:layout_alignParentStart="true"
+                    android:text="09977276089"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/button_home_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_phone_call"
+                    android:text="CALL" />
+
+                <TextView
+                    android:id="@+id/dialog_home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/button_home_phone"
+                    android:layout_alignBottom="@+id/button_home_phone"
+                    android:layout_alignParentStart="true"
+                    android:text="09256443072"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- cheat code: negative margin -->
+    <com.prime.awitd.contactbook.model.PrimeRoundedImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/informations_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:background="@drawable/profile_circular_border_imageview"
+        android:src="@mipmap/awitd_water_logo" />
+
+</RelativeLayout>

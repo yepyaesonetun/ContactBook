@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e91e63</color>
+    <color name="colorPrimaryDark">#b70343</color>
+    <color name="colorAccent">#ec407a</color>
+    <color name="color_Android">#4fa73d</color>
+    <color name="white">#fff</color>
+    <color name="colorsoftpink">#d81b60</color>
+</resources>
